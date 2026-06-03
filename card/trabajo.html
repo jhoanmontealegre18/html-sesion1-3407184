@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD ELEGANTE</title>
+    <style>
+        /* RESET ESTÁNDAR */
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* PALETA DE COLORES ELEGANTE Y CÁLIDA */
+        :root { 
+            --white_color: #F0F4F8; /* Blanco roto/crema para no lastimar la vista */
+            --orange_color: #E07A5F; /* Naranja terracota cálido y elegante */
+            --orange_dark_color: #D1664A; /* Terracota ligeramente más oscuro para hover */
+            --card_bg: #516c92; /* Azul oscuro profundo para máxima elegancia */
+            --background_color: linear-gradient(135deg, #F4F1DE 0%, #EAB69F 100%); /* Fondo arena/cálido */
+            --font_color: #F0F4F8; /* Texto claro para resaltar en el fondo oscuro */
+            --text_muted: #A3B1C6; /* Color secundario para el texto descriptivo */
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: var(--background_color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }  
+
+        img {
+            display: block;
+            width: 100%; 
+            height: auto;
+        }
+
+        .cards_box {
+            padding: 1rem;
+        }
+
+        .cards {
+            max-width: 1120px;
+            border-radius: 1.25rem;
+        }
+          
+        .card_details {
+            width: 300px;
+            border-radius: 1.25rem;
+            overflow: hidden; 
+            background-color: var(--card_bg);
+            /* Sombra suave para darle un toque premium y separarlo del fondo */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+          
+        .card_img_box {
+            display: block;
+            width: 100%;
+            background-color: var(--orange_color);
+            margin: 2rem auto -0.75rem auto; 
+            /* Borde un poco más delgado (8px) para que luzca más refinado */
+            border: var(--orange_color) solid 8px;
+            padding: 0; 
+        }
+          
+        .card_data {
+            background: var(--card_bg);
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            position: relative;
+        }
+           
+        .card_name {
+            font-size: 1.1rem;
+            color: var(--font_color);
+            margin-bottom: .5rem;
+            letter-spacing: 0.5px; /* Un poco de espaciado le da elegancia al nombre */
+        }
+          
+        .card_description {
+            font-weight: 400;
+            margin-bottom: 1.75rem;
+            color: var(--text_muted); /* Texto ligeramente más suave para no competir con el título */
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+          
+        .card_button {
+            display: inline-block;
+            background-color: var(--orange_color);
+            padding: .75rem 1.5rem;
+            border-radius: .5rem; /* Bordes un poco más redondeados */
+            color: var(--white_color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(224, 122, 95, 0.3); /* Sombra cálida en el botón */
+        } 
+         
+        .card_button:hover {
+            background-color: var(--orange_dark_color);
+            transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el mouse */
+            box-shadow: 0 6px 15px rgba(224, 122, 95, 0.4);
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cards_box swiper">
+      <div class="cards">
+         <div class="swiper-wrapper">
+
+            <section class="card_details swiper-slide">
+               <div class="card_img_box">
+                   <img src="pabloescobar.jpg" alt="retrato">
+               </div>
+               <div class="card_data">
+                  <h3 class="card_name">Sebastian Rodriguez</h3>
+                  <p class="card_description">
+                   Software engineer who knows how to solve problems in difficult
+                   circumstances and specializes in working under pressure.
+                  </p>
+                  <a class="card_button">Follow me</a>
+               </div>
+            </section>
+
+         </div>
+      </div>
+    </div>
+  </div>
+</body>   
+</html>
